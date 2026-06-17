@@ -60,6 +60,18 @@
 					"type": "number",
 					"description": "格式化每个段落的长度",
 					"default": 20
+				},
+				"novel.speedMode": {
+					"type": "string",
+					"enum": ["hour", "minute"],
+					"default": "hour",
+					"description": "输入速度显示模式：hour=字/时, minute=字/分"
+				},
+				"novel.charCountMode": {
+					"type": "string",
+					"enum": ["total", "chinese", "nonAscii"],
+					"default": "total",
+					"description": "字数统计模式：total=字符数, chinese=中文数, nonAscii=非ASCII码位数"
 				}
 			}
 		},
@@ -87,6 +99,14 @@
 					"light": "media/light/document.svg",
 					"dark": "media/dark/document.svg"
 				}
+			},
+			{
+				"command": "novel.toggleSpeedMode",
+				"title": "切换速度模式 (字/时 ↔ 字/分)"
+			},
+			{
+				"command": "novel.toggleCharCountMode",
+				"title": "切换字数模式 (字符数/中文数/非ASCII)"
 			}
 		],
 		"viewsContainers": {

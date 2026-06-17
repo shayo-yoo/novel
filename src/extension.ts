@@ -4,6 +4,7 @@ import Completion from './completion';
 import Gpt from './gpt';
 import Format from './format/format';
 import Hover from './hover';
+import Stats from './stats';
 
 export async function activate(context: vscode.ExtensionContext) {
 	await new Completion(context).activate();
@@ -11,4 +12,5 @@ export async function activate(context: vscode.ExtensionContext) {
 	await new Highlight(context).activate();
 	await new Format(context).activate();
 	await new Hover(context).activate();
+	await new Stats(context).activate();
 }
